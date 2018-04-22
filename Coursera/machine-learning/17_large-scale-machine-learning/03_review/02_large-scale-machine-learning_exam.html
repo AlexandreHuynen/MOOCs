@@ -1,0 +1,296 @@
+<meta charset="utf-8"/>
+<h3>
+ Question 1
+</h3>
+<co-content>
+ <p hasmath="true">
+  Suppose you are training a logistic regression classifier using stochastic gradient descent. You find that the cost (say, $$cost(\theta,(x^{(i)}, y^{(i)}))$$, averaged over the last 500 examples), plotted as a function of the number of iterations, is slowly increasing over time.  Which of the following changes are likely to help?
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="0" type="radio"/>
+  <co-content>
+   <span>
+    Use fewer examples from your training set.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="0" type="radio"/>
+  <co-content>
+   <span>
+    Try averaging the cost over a smaller number of examples (say 250 examples instead of 500) in the plot.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="0" type="radio"/>
+  <co-content>
+   <span hasmath="true">
+    This is not possible with stochastic gradient descent, as it is guaranteed to converge to the optimal parameters $$\theta$$.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="0" type="radio"/>
+  <co-content>
+   <span hasmath="true">
+    Try halving (decreasing) the learning rate $$\alpha$$, and see if that causes the cost to now consistently go down; and if not, keep halving it until it does.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 2
+</h3>
+<co-content>
+ <p>
+  Which of the following statements about stochastic gradient
+ </p>
+ <p>
+  descent are true? Check all that apply.
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="1" type="checkbox"/>
+  <co-content>
+   <span hasmath="true">
+    You can use the method of numerical gradient checking to verify that your stochastic gradient descent implementation is bug-free.  (One step of stochastic gradient descent computes the partial derivative $$\frac{\partial}{\partial \theta_j} cost(\theta, (x^{(i)}, y^{(i)}))$$.)
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="1" type="checkbox"/>
+  <co-content>
+   <span>
+    Before running stochastic gradient descent, you should randomly shuffle (reorder) the training set.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="1" type="checkbox"/>
+  <co-content>
+   <span hasmath="true">
+    In order to make sure stochastic gradient descent is converging, we typically compute $$J_{\rm train}(\theta)$$ after each iteration (and plot it) in order to make sure that the cost function is generally decreasing.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="1" type="checkbox"/>
+  <co-content>
+   <span hasmath="true">
+    Suppose you are using stochastic gradient descent to train a linear regression classifier. The cost function $$J(\theta) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})^2$$ is guaranteed to decrease after every iteration of the stochastic gradient descent algorithm.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 3
+</h3>
+<co-content>
+ <p>
+  Which of the following statements about online learning are true? Check all that apply.
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="2" type="checkbox"/>
+  <co-content>
+   <span>
+    One of the disadvantages of online learning is that it requires a large amount of computer memory/disk space to store all the training examples we have seen.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="2" type="checkbox"/>
+  <co-content>
+   <span hasmath="true">
+    One of the advantages of online learning is that there is no need to pick a learning rate $$\alpha$$.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="2" type="checkbox"/>
+  <co-content>
+   <span hasmath="true">
+    When using online learning, in each step we get a new example $$(x,y)$$, perform one step of (essentially stochastic gradient descent) learning on that example, and then discard that example and move on to the next.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="2" type="checkbox"/>
+  <co-content>
+   <span>
+    In the approach to online learning discussed in the lecture video, we repeatedly get a single training example, take one step of stochastic gradient descent using that example, and then move on to the next example.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 4
+</h3>
+<co-content>
+ <p>
+  Assuming that you have a very large training set, which of the
+ </p>
+ <p>
+  following algorithms do you think can be parallelized using
+ </p>
+ <p>
+  map-reduce and splitting the training set across different
+ </p>
+ <p>
+  machines?  Check all that apply.
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    Logistic regression trained using stochastic gradient descent.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span hasmath="true">
+    Computing the average of all the features in your training set $$\mu = \frac{1}{m} \sum_{i=1}^m x^{(i)}$$ (say in order to perform mean normalization).
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    Logistic regression trained using batch gradient descent.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    Linear regression trained using stochastic gradient descent.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 5
+</h3>
+<co-content>
+ <p>
+  Which of the following statements about map-reduce are true? Check all that apply.
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    Linear regression and logistic regression can be parallelized using map-reduce, but not neural network training.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    If you have only 1 computer with 1 computing core, then map-reduce is unlikely to help.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span hasmath="true">
+    Because of network latency and other overhead associated with map-reduce, if we run map-reduce using $$N$$ computers, we might get less than an $$N$$-fold speedup compared to using 1 computer.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    When using map-reduce with gradient descent, we usually use a single machine that accumulates the gradients from each of the map-reduce machines, in order to compute the parameter update for that iteration.
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
